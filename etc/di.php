@@ -1,6 +1,7 @@
 <?php
 namespace Starbug\Display;
 
+use function DI\add;
 use function DI\autowire;
 use function DI\get;
 use Starbug\Display\Helper\BreadcrumbsHelper;
@@ -46,8 +47,8 @@ return [
   ],
   FormHookFactoryInterface::class => autowire(FormHookFactory::class)
     ->constructorParameter("hooks", get("form.hooks")),
-  "template.helpers" => [
+  "template.helpers" => add([
     "breadcrumbs" => BreadcrumbsHelper::class,
     "displays" => DisplaysHelper::class
-  ]
+  ])
 ];
