@@ -1,6 +1,8 @@
 <?php
 namespace Starbug\Display\Hook;
 
+use Starbug\Display\CheckboxDisplay;
+
 use Starbug\Db\Collection\SelectCollection;
 
 class FormMultipleSelectHook extends FormHook {
@@ -19,7 +21,7 @@ class FormMultipleSelectHook extends FormHook {
       }
     }
     if (empty($field["displayType"])) {
-      $field["displayType"] = "CheckboxDisplay";
+      $field["displayType"] = CheckboxDisplay::class;
     }
 
     if (!empty($field["from"]) && empty($field["query"])) {

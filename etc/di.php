@@ -25,6 +25,7 @@ use Starbug\Display\Hook\FormTextHook;
 use Starbug\Display\Hook\FormTextareaHook;
 
 return [
+  'Starbug\Display\*Interface' => autowire('Starbug\Display\*'),
   "form.hooks" => [
     "checkbox" => FormCheckboxHook::class,
     "file" => FormFileHook::class,
