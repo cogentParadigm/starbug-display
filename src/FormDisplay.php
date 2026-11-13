@@ -1,3 +1,4 @@
+<?php
 namespace Starbug\Display;
 
 use Psr\Http\Message\ServerRequestInterface;
