@@ -6,6 +6,7 @@ use function DI\autowire;
 use function DI\get;
 use Starbug\Display\Helper\BreadcrumbsHelper;
 use Starbug\Display\Helper\DisplaysHelper;
+use Starbug\Display\Helper\FilterHelper;
 use Starbug\Display\Hook\FormCheckboxHook;
 use Starbug\Display\Hook\FormFileHook;
 use Starbug\Display\Hook\FormHiddenHook;
@@ -49,6 +50,7 @@ return [
     ->constructorParameter("hooks", get("form.hooks")),
   "template.helpers" => add([
     "breadcrumbs" => BreadcrumbsHelper::class,
-    "displays" => DisplaysHelper::class
+    "displays" => DisplaysHelper::class,
+    "filter" => FilterHelper::class
   ])
 ];
